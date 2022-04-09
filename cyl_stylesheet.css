@@ -1,0 +1,264 @@
+/* O v e r a l l  s t u f f */ 
+:root {
+    font-size: 13px;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+@viewport {
+    width: device-width;
+}
+
+/* H e a d e r + F o o t e r  r e l a t e d*/
+header {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Impact, Charcoal, sans-serif;
+    padding: 0.3em;
+}
+header img {
+    max-width: 20%;
+    vertical-align: middle;
+    float: left;
+}
+footer {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+/* L i n k s*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    top : 0;
+    left : 0;
+    padding: 2%;
+    text-align: center;
+    background-color: black;
+    z-index: 9;
+}
+nav a {
+    padding: 0.7% 8% 0.7% 8%;
+    background-color: #8319D4;
+    color: #FD3ED7;
+    border: 1px solid black;
+    font-size: 1.1rem;
+}
+a {
+    color: rgb(62, 241, 116);
+}
+
+/* B o d y*/
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    width: 95%;
+    margin: 2em;
+    padding: 2em;
+    background: linear-gradient(110deg,  rgba(0,212,255,1) 0%, rgba(84,9,121,1) 48%, rgba(2,0,36,1) 100%); /*got this idea from w3schools, colors were chosen by me*/
+    background-color: #C4F5FC;
+}
+li b{
+    color: #FD3ED7;
+}
+
+/* H e a d i n g s*/
+h2 {
+    display: block;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: #d98ff0;
+    border: 5px solid #8BD9C7;
+    border-radius: 0.8em 0em 0.8em 0em;
+    padding: 0.5em;
+    animation: Border 3s infinite alternate;
+}
+h3 {
+    font-size: 1.5rem;
+    font-style: italic;  
+}
+h4 {
+    margin: -0.6em auto;
+    font-size: 1.3rem;
+}
+@keyframes Border { /*got this idea from w3schools, colors were chosen by me*/
+    0% {border-color:#0076BE;}
+    25% {border-color: #4DB4D7;}
+    50% {border-color: #95D8EB;}
+    75% {border-color:#8BD9C7;}
+    100% {border-color:  #48BF91;}
+}
+
+/* I m a g e + V i d e o*/
+section {
+    margin: 0.3em;
+}
+img {
+    max-width: 100%;
+}
+figcaption {
+    font-size: 0.6rem;
+    color: grey;
+    text-align: right;
+}
+
+/*iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}*/
+
+/*I got the following "main content" code from a youtube video, link : https://youtu.be/X4t0JxiBeO0*/
+.main-content, .main-content2{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/*I got the following "iframe" code from a youtube video, link : https://youtu.be/9YffrCViTVk*/
+.iframe-container{
+    position: relative;
+    max-width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+.iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*C o l u m n s + T a b l e s*/
+table,th,td {
+    border: 1px solid rgb(74, 201, 201);
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%; 
+}
+th,td {
+    padding: 1.2em;
+}
+th {
+    color: #00d9ff;
+}
+
+/* L e a r n   M o r e   S e c t i o n */
+#learn{
+    display: block;
+}
+#learn figure {
+    padding: 0.8em;
+    border: 1px solid  rgb(74, 201, 201);
+}
+#learn figure a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(64, 243, 243);
+    font-style: italic;
+}
+
+/* H o v e r i ng*/
+@media (hover: hover) {
+    p a:hover, table a:hover {
+        background-color: #808080;
+    }
+    nav a:hover {
+        background-color:#f3f5a6;
+    }
+    tr ~ tr:hover{
+        background-color: #8319D4
+    }
+    section img:hover {
+        transform: scale(1.25)
+    }
+    #learn img:hover{
+        transform: scale(1);
+    }
+    #learn figure:hover{
+        background-color: rgb(91, 148, 233);
+        transform: scale(1.1);
+    }
+}
+
+/* R W D */
+@media screen and (min-width: 500px) {
+    header img {
+        max-width: 13%;
+    }
+    header {
+        letter-spacing: 1em;
+    }
+    nav{
+        padding: 1.8%
+    }
+    nav a {
+        padding: 0.5% 8% 0.5% 8%;
+        background-color: #8319D4;
+        color: #FD3ED7;
+    }  
+}
+
+@media screen and (min-width: 800px) {
+    :root {
+        font-size: 17px;
+    }
+    header {
+        padding: 1em;
+        letter-spacing: 1em;
+    }    
+    header img {
+        max-width: 10%;
+    }
+    nav {
+        padding: 1.2%;
+    }
+    nav a {
+        padding: 0.5% 10% 0.5% 10%;
+    }
+    h2 {
+        text-align: left;
+    }
+    h3 {
+        margin: 1em 0em -0.2em 0em;
+    }
+    figcaption {
+        font-size: 0.8rem;
+    }
+    .car {
+        max-width: 50%;
+        float: left;
+        padding: 30px;
+    }
+    .cols {
+      column-count: 2;
+    }
+    #facts {
+        display: flex;
+    }
+    #facts section+section {
+        max-width: 45%;
+        padding: 0em 0em 0em 2em;
+    }
+    #learn{
+        display: flex;
+    }
+    #learn figure {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        justify-content: space-evenly;
+    }
+    .main-content{
+        max-width: 70%;
+    }
+}
